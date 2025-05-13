@@ -1,5 +1,6 @@
-import { supabase } from "../supabase/supabaseClient";
-////asdasdasdasd
+
+import { supabase } from "/supabase/supabaseClient";
+
 // get all the books from supabase
 async function getBooks() {
     const { data, error } = await supabase
