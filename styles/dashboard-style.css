@@ -47,11 +47,13 @@ body {
     background-color: #e6a756; /* Warm orange - autumnal */
     color: #5c4033; /* Deep brown text */
     width: 250px;
-    padding-top: 20px;
     transition: transform 0.3s ease-in-out;
     transform: translateX(0);
+
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+
     height: 100vh;
     position: fixed;
     top: 0;
@@ -61,38 +63,60 @@ body {
 }
 
 .sidebar.hidden {
-    transform: translateX(-250px);
+    transform: translateX(-220px);
+}
+
+/* New container for the close button */
+.sidebar-header-top {
+    display: flex;
+    justify-content: flex-end; /* Push content to the right */
+    align-items: center; /* Vertically center if needed */
+    border-bottom: 1px solid #d98850; /* Optional separator */
+}
+
+/* Close Button (inside sidebar) - Modified */
+.close-btn {
+    background-color: #dd925d;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+
+    border-left: #5c4033 2px dotted;
+
+    color: #5c4033;
+
+    /* Make it take the full height of its container */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+}
+
+.close-btn:hover {
+    color: #ffffff;
+    background-color: rgba(255, 144, 144, 0.192); /* Subtle background on hover */
+}
+
+.sidebar-content {
+    flex-grow: 1; /* Allow content to take remaining vertical space */
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar-header {
     padding: 15px 20px;
-    text-align: left; /* Align close button and text */
+    text-align: left;
     border-bottom: 1px solid #d98850;
     margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    overflow-wrap: anywhere;
 }
 
 #current-user-name {
     display: flex;
+    flex-wrap: wrap;
     font-size: 1.3rem;
     margin: 0;
-}
-
-/* Close Button (inside sidebar) */
-.close-btn {
-    background: none;
-    border: none;
-    color: #5c4033;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 5px;
-    margin-left: auto; /* Push to the right */
-}
-
-.close-btn:hover {
-    color: #3a2c2a;
 }
 
 .sidebar-nav ul {
@@ -149,20 +173,7 @@ body {
 }
 
 #content.sidebar-hidden {
-    padding-left: 20px;
-}
-
-/* Autumn Scene (Example - replace with your actual assets) */
-.autumn-scene {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.autumn-scene img {
-    max-width: 100px;
-    height: auto;
+    padding-left: 50px;
 }
 
 /* Responsive adjustments */

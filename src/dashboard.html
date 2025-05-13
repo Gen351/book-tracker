@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8" />
     <title>Dashboard</title>
-    <script type="module" src="../scripts/dashboard.js"></script>
-    <link rel="stylesheet" href="../styles/dashboard-style.css">
+    <script type="module" src="/scripts/dashboard.js"></script>
+    <link rel="stylesheet" href="/styles/dashboard-style.css">
 </head>
 <body>
     <div class="container">
-        <aside class="sidebar" id="sidebar">
-            <button class="close-btn" id="toggleSidebarBtn">☰</button>
+        <aside class="sidebar" id="sidebar" style="flex-direction: row;">
+            
             <div class="sidebar-content">
                 <div class="sidebar-header">
                     <h2 id="current-user-name">User Name</h2>
@@ -23,6 +23,9 @@
                 <div class="sidebar-footer">
                     <button id="logout">Log out</button>
                 </div>
+            </div>
+            <div class="sidebar-header-top">
+                <button class="close-btn" id="toggleSidebarBtn">☰</button>
             </div>
         </aside>
 
