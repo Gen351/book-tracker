@@ -1,4 +1,4 @@
-import { supabase } from '../supabase/supabaseClient';
+import { supabase } from '/supabase/supabaseClient';
 
 //
 // — LOGIN HANDLER —
@@ -25,7 +25,7 @@ loginForm.addEventListener('submit', async e => {
             loginStatus.textContent = error.message;
         }
     } else {
-        window.location.href = '../src/dashboard.html';
+        window.location.href = '/src/dashboard.html';
     }
 });
 
