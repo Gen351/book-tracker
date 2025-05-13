@@ -1,4 +1,4 @@
-import { supabase } from "/supabase/supabaseClient";
+import { supabase } from "../supabase/supabaseClient";
 
 (async () => {
     // v2: get the current session (includes user)
@@ -11,7 +11,7 @@ import { supabase } from "/supabase/supabaseClient";
     const user = session?.user;
     if (!user) {
         // not logged in → back to login
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
         return;
     }
     // user is logged in
@@ -19,7 +19,7 @@ import { supabase } from "/supabase/supabaseClient";
 
     document.getElementById('logout').onclick = async () => {
         await supabase.auth.signOut();
-        window.location.href = 'index.html';
+        window.location.href = '/index.html';
     };
 })();
 
