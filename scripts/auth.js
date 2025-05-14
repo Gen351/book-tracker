@@ -25,7 +25,7 @@ loginForm.addEventListener('submit', async e => {
             loginStatus.textContent = error.message;
         }
     } else {
-        window.location.href = '/src/dashboard.html';
+        window.location.href = '/dashboard.html';
     }
 });
 
